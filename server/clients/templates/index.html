@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clients</title>
+</head>
+<body>
+<h1 align="center">Clients</h1>
+<ul>
+    {% for client in clients %}
+    <p>Domain: {{ client.domain }}</p>
+    <p>Machine: {{ client.machine_name }}</p>
+    <p>IP: {{ client.ip_address }}</p>
+    <p>User: {{ client.username }}</p>
+    <p>Last Active: {{ client.last_active }}</p>
+    <p>Connected: {% if client.is_connected %}Yes{% else %}No{% endif %}</p>
+    {% if client.screenshot %}
+        <a href="{{ client.screenshot }}" target="_blank">View Screenshot</a>
+    {% else %}
+        No screenshot available.
+    {% endif %}
+    <p>========================================================================================================================================================</p>
+    {% endfor %}
+</ul>
+</body>
+</html>
