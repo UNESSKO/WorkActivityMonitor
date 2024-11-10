@@ -14,7 +14,7 @@ g++ client.cpp -o WorkActivityMonitor -lws2_32 -lgdi32 -mwindows
 
 ### Установка сервера
 
-python -m venv venv
-.\venv\Scripts\activate
-python manage.py migrate
-python manage.py runserver
+- python -m venv venv
+- .\venv\Scripts\activate
+- python manage.py migrate
+- python manage.py runserver
