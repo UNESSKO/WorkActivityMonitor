@@ -10,11 +10,12 @@
 
 ### Установка клиента
 
-g++ client.cpp -o WorkActivityMonitor -lws2_32 -lgdi32 -mwindows
+- g++ client.cpp -o WorkActivityMonitor -lws2_32 -lgdi32 -mwindows
 
 ### Установка сервера
 
 - python -m venv venv
 - .\venv\Scripts\activate
+- pip install -r requirements.txt
 - python manage.py migrate
 - python manage.py runserver
